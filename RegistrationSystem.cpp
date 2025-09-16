@@ -10,25 +10,29 @@ int main(){
     optimize();  
 
    
-        int n;cin>>n;
+        int n,m;cin>>n>>m;
         cin.ignore();
         
-        map <string ,int> vis;
+        vector <pair <string,string>> m1;
+        vector <pair <string,string>> m2;
 
-        while (n--)
-        {
-            /* code */
-            string s;cin>>s;
-
-            if(vis[s]==0) {
-                cout<<"OK"<<endl;
-            }
-            else{
-                cout<<s<<vis[s]<<endl;
-            }
-
-            vis[s]++;
+        for(int i=0;i<n;i++){
+            string a,b;cin>>a>>b;
+            m1.push_back({a,b});
+        }
+        for(int i=0;i<m;i++){
+            string a,b;cin>>a>>b;
+            b.erase(b.end()-1);
+            m2.push_back({a,b});
         }
 
-    } 
+        for(auto u : m2){
+           for(auto v : m1){
+            if(v.second==u.second){
+                cout<<u.first<<" "<<u.second<<"; "<<"#"<<v.first<<endl;
+            }
+           }
+        }
+
+    }
     
