@@ -8,32 +8,50 @@ using namespace std;
 
 int main(){ 
     optimize();  
-
-   
         int n;cin>>n;
-        vector <int> v;
+        vector <string> v;
         while (n--)
         {
             /* code */
-            int a;cin>>a;
+            string a;cin>>a;
             v.push_back(a);
         }
 
-        map <int ,int> m;
         for(auto u : v){
-            m[u]++;
-        }
-        int ans=0;
-        for(auto u : m){
-            if(u.first>u.second){
-               ans+=u.second;
-            }
-            else{
-                ans+=(u.second-u.first);
+            if(u.size()>1){
+                cout<<"Bigger - "<<u.size()<<endl;
+                if(isdigit(u[0])){
+                    cout<<"DIgit"<<endl;
+                }else{
+                    cout<<"not DIgit"<<endl;
+                }
+                
+            }else{
+                cout<<"Smaller - "<<u.size()<<endl;
+
+                if(isdigit(u[0])){
+                    cout<<"DIgit"<<endl;
+                }else{
+                    cout<<"not DIgit"<<endl;
+                }
             }
         }
 
-        cout<<ans<<endl;
+        // stack <int> s;
+
+        // for(auto u : v) s.push(stoi(u));
+
+        
+        // while(!s.empty()){
+        //     cout<<s.top()<<" ";
+
+        //     s.pop();
+        // }
+
+
+        // char c = '+';
+        // int d = c;
+        // cout<<d;
         
     } 
     
