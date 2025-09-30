@@ -15,6 +15,8 @@ int main(){
             /* code */
             string a;cin>>a;
             v.push_back(a);
+
+            cout<<a<<endl;
         }
 
         for(auto u : v){
