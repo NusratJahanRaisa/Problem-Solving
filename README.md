@@ -1,11 +1,11 @@
-#Problem-Solving
+# Problem-Solving
 
 Welcome to my **Problem-Solving Repository**!
 This repo is where I consistently practice and improve my **competitive programming** and **algorithmic thinking** across multiple online judges.
 
 ---
 
-##Platforms Covered
+## Platforms Covered
 
 **Codeforces**  
 Solving different rated problems regularly to enhance problem analysis and speed.
@@ -21,7 +21,7 @@ Solving interesting challenges from various sites to broaden my skillset.
 
 ---
 
-##Topics I Explore
+## Topics I Explore
 
 - Data Structures and Algorithms  
 - Two Pointer, Sliding Window, Prefix Sum  
@@ -32,7 +32,7 @@ Solving interesting challenges from various sites to broaden my skillset.
 
 ---
 
-##Tools & Environment
+## Tools & Environment
 
 - **Language:** C++  
 - **Editor:** VS Code  
