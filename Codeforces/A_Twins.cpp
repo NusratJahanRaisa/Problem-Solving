@@ -12,7 +12,6 @@ int sum(int a[],int i,int n){
   for(int j=i;j<n;j++){
      res+=a[j];
   }
-//   cout<<res<<" "<<"aaaaaaaaaaaa"<<endl;
   return res;
 }
 int main(){ 
@@ -21,11 +20,6 @@ int main(){
     int n;cin>>n;int a[n+1];
     for(int i=0;i<n;i++) cin>>a[i];
     sort(a,a+n,greater<int>());
-
-
-    // for(int i=0;i<n;i++) cout<<a[i]<<endl;
-    // cout<<endl<<endl;
-
 
     for(int i=0;i<n;i++){
         // cout<<a[i]<<endl;
