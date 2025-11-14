@@ -12,14 +12,12 @@ int main(){
 
     for(int i=0;i<8;i++){
         cin>>a[i];
-        if(a[i]<100 && a[i]>675) f=false;
+        if(a[i]<100 || a[i]>675) f=false;
         if(a[i]%25!=0) f=false;
     }
     
-    for(int i=0;i<8;i++){
-      for(int j=i+1;j<8;j++){
-        if(a[i]>=a[j]) f=false;
-      }
+    for(int i=0;i<7;i++){
+        if(a[i]>a[i+1]) f=false;
     }
     if(f) yes
     else no
