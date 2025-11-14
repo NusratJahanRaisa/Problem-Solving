@@ -31,7 +31,7 @@ int main(){
        }
     }
     if(secMin==INT_MAX || thirdMin==INT_MAX)
-    cout<<-1<<endl;
+    cout<<"-1 -1 -1"<<endl;
     else
     cout<<firstIn<<" "<<secIn<<" "<<thirdIn<<endl;
     
