@@ -8,16 +8,26 @@ using namespace std;
 int main(){ 
     optimize(); 
     
-    int n;cin>>n;int a[n+1];
+    int n;cin>>n;
+    int a[n+1];
     for(int i=0;i<n;i++) cin>>a[i];
-    bool f=false;
+
     for(int i=0;i<n-1;i++){
-        if(a[i]>=a[i+1]){
-            cout<<a[i]<<endl;
-            f=true;
-            break;
+      cout<<a[i]<<" ";
+
+
+      if(a[i]>a[i+1]){
+        for(int j=a[i]-1;j>a[i+1];j--){
+            cout<<j<<" ";
         }
+      }else if(a[i]<a[i+1]){
+        for(int j=a[i]+1;j<a[i+1];j++){
+            cout<<j<<" ";
+        }
+      }
     }
-    if(!f) cout<<a[n-1]<<endl;
+
+    cout<<a[n-1]<<endl;
+    
     return 0;
 }
