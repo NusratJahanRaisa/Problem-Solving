@@ -22,6 +22,7 @@ int main(){
     }
 
     sort(v.begin(),v.end(),compareBySecond);
+
     int count=1;
     // cout << "------"<<endl;
     int fValue = v[0].second;
