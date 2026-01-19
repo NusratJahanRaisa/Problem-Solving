@@ -5,43 +5,38 @@ using namespace std;
 #define no cout<<"NO\n";
 #define optimize() ios_base::sync_with_stdio(0);cin.tie(0);cout.tie(0);
 
-int main(){ 
-    optimize();
-    
-    int t;cin>>t;
-    while (t--)
-    {
-        /* code */
-        int n,m,h;cin>>n>>m>>h;
-        vector<int>v(n);
-        // vector<int>v2(n);
+void Ja_han(){
 
-        for(int i=0;i<n;i++){
-            cin>>v[i];
-            // v2[i]=v[i];
-        }
+    int n,m,h; cin >> n>>m>>h;
+    vector<int> v(n+1);
 
-        while (m--)
-        {
-            /* code */
-            int bi,ci;cin>>bi>>ci;
+    for(int i = 1; i <= n; i++) cin >> v[i];
+    vector<pair<int,int>> op(m);
+    int last_reset = -1;
+    for(int i=0;i<m;i++){
+       cin>>op[i].first>>op[i].second;
 
-            // int newVal=v[bi-1]+ci;
-            // // cout<<newVal<<" "<<bi<<" "<<ci<<endl;
-            // if(newVal<=h){
-            //     v[bi-1]=newVal;
-            // }
-            // else{
-            //    v=v2;
-            // }
-        }
-        
-        for(int i=0;i<n;i++){
-            cout<<v[i]<<" ";
-        }
-        cout<<endl;
+       v[op[i].first]+=op[i].second;
+       if(v[op[i].first]>h){
+           for(int j=i;j>last_reset;j--){
+               v[op[j].first]-=op[j].second;
+           }
+           last_reset=i;
+       }
     }
-    
 
-    return 0; 
+    for(int i = 1; i <= n; i++) cout<<v[i]<<" ";
+
+    cout<<endl;
+}
+
+int main(){
+    optimize();
+
+    int t; cin >> t;
+    while(t--){
+        Ja_han();
+    }
+
+    return 0;
 }
