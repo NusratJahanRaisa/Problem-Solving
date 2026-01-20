@@ -14,10 +14,6 @@ void Ja_han(){
 
     sort(v.begin()+1,v.end());
     
-    // for(int i = 1; i <= n; i++) cout<< v[i]<<" ";
-    // cout<<endl;
-
-
     int dayCnt=0,j=1;
 
     for(int i=1;i<=n;i++){
