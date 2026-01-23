@@ -7,12 +7,17 @@ using namespace std;
 
 void Ja_han(){
 
-    int n,k; cin >> n >>k;
-    cout<<(n-1)*k+1<<endl;    
+    int n; cin >> n;
+    vector<int> v(n);
+
+    for(int i = 0; i < n; i++) cin >> v[i];
+
+    
 }
 
 int main(){
     optimize();
+
     int t; cin >> t;
     while(t--){
         Ja_han();
