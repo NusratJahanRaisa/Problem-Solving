@@ -6,7 +6,7 @@ using namespace std;
 void Ja_han(){
 
     stack<string> st, backup;
-    string current = "http://www.lightoj.com/"; // current page
+    string current = "http://www.lightoj.com/"; 
 
     while (true)
     {
@@ -19,14 +19,14 @@ void Ja_han(){
 
         else if(command=="VISIT"){
             string url; cin >> url;
-            st.push(current);           // push current to back stack
-            current = url;              // update current
-            while(!backup.empty()) backup.pop(); // clear forward stack
+            st.push(current);          
+            current = url;             
+            while(!backup.empty()) backup.pop(); 
             cout << current << endl;
         }
 
         else if(command=="BACK"){
-            if(st.empty()){             // no back pages
+            if(st.empty()){             
                 cout << "Ignored" << endl;
             }
             else{
