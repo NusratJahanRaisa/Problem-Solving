@@ -6,28 +6,14 @@ using namespace std;
 #define optimize() ios_base::sync_with_stdio(0);cin.tie(0);cout.tie(0);
 
 void Ja_han(){
-
-    int n; cin >> n;
-    vector<vector<int>> v;
-
+    int n;cin>>n;
     for(int i=0;i<=n;i++){
-        for(int j=0;j<=n;j++){
-            for(int k=0;k<=n;k++){
-               if(i+j+k<=n){
-                v.push_back({i,j,k});
-               }
-            }
-        }
+       for(int j=0;j<=n;j++){
+         for(int k=0;k<=n;k++){
+            if(i+j+k<=n) cout<<i<<" "<<j<<" "<<k<<endl;
+         }
+       }
     }
-
-    for(int i=0;i<v.size();i++){
-        cout<<v[i][0]<<" "<<v[i][1]<<" "<<v[i][2]<<endl;
-    }
-
-
-    
-
-
     
 }
 
