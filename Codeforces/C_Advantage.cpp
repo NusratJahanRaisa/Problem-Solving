@@ -11,17 +11,16 @@ void Ja_han(){
     vector<int> v(n),a;
 
     for(int i = 0; i < n; i++) cin >> v[i];
-    
     a=v;
     sort(v.begin(),v.end());
-    
-    int max1=v[n-1],max2=v[n-2];
 
-    for(int i = 0; i < n; i++){
+    int max1 = *(v.end()-1);
+    int max2 = *(v.end()-2);
+    
+    for(int i=0;i<a.size();i++){
         if(a[i]==max1){
             cout<<max1-max2<<" ";
-        }
-        else{
+        }else{
             cout<<a[i]-max1<<" ";
         }
     }
