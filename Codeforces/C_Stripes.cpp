@@ -17,6 +17,8 @@ void Ja_han(){
 
     int cnt=0;
     char ans;
+
+    // for row
     for(int i=0;i<8;i++){
         for(int j=0;j<8;j++){
             if(v[i][j]=='R'){
@@ -30,6 +32,7 @@ void Ja_han(){
         else{
             cnt=0;
         }
+        
     }
     
     // column count
