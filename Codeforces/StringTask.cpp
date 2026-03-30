@@ -5,21 +5,32 @@ using namespace std;
 #define no cout<<"NO\n";
 #define optimize() ios_base::sync_with_stdio(0);cin.tie(0);cout.tie(0);
 
-int main(){ 
-    optimize();  
+void Ja_han(){
 
-    string s,finalString; cin>>s;
+    string s,v="aoyeui"; cin>>s;
 
     for(int i=0;i<s.size();i++){
+
         s[i]=tolower(s[i]);
 
-        if(s[i]!='a' && s[i]!='o' && s[i]!='y' && s[i]!='e' && s[i]!='u' && s[i]!='i'){
-          finalString=finalString+'.'+s[i];
+        bool flag = true;
+
+        for(auto a : v){
+            if(s[i]==a) flag=false;
+        }
+        if(flag==true){
+            cout<<"."<<s[i];
         }
     }
-    cout<<finalString<<endl;
+}
 
+int main(){
+    optimize();
 
+    // int t; cin >> t;
+    // while(t--){
+        Ja_han();
+    // }
 
     return 0;
 }
